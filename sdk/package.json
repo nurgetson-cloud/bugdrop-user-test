@@ -1,0 +1,19 @@
+{
+  "name": "bugdrop-private-v1-consumer",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "build": "npm run check && esbuild src/browser.ts --bundle --format=esm --outfile=dist/browser.js"
+  },
+  "dependencies": {
+    "@bugdrop/browser": "file:vendor/bugdrop-browser-0.1.0.tgz",
+    "@bugdrop/server": "file:vendor/bugdrop-server-0.1.0.tgz"
+  },
+  "devDependencies": {
+    "typescript": "5.7.2",
+    "esbuild": "0.28.1",
+    "@types/node": "22.20.2"
+  }
+}

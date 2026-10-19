@@ -1,0 +1,15 @@
+{
+  "name": "bugdrop-user-test",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test test/*.test.mjs",
+    "check": "node --check server.mjs && node verify-sdk.mjs && npm test",
+    "sdk:check": "npm --prefix sdk ci --ignore-scripts --no-audit --no-fund && npm --prefix sdk run build"
+  }
+}
